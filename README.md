@@ -89,7 +89,7 @@
 
 目前项目托管在Gitee和Github平台上中，欢迎大家star 和 fork 支持~
 
-- github地址 `https://github.com/hzh0425/yunheng-blog`
+- github地址 `https://github.com/hzh0425/yunheng_blog`
 - Gitee地址  `https://gitee.com/zisuu/yunheng_blog`
 
 ## 目录介绍
@@ -302,20 +302,17 @@ npm install xxxxx --save
 ![首页]
 <img src="https://images.gitee.com/uploads/images/2020/0827/202943_12b78cdd_5657726.png "屏幕截图.png"/>
 
-![留言](https://images.gitee.com/uploads/images/2020/0827/203029_d0487b0d_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/203029_d0487b0d_5657726.png"></img>
 
-![文章页面](https://images.gitee.com/uploads/images/2020/0827/203124_5c7ccfd8_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/203124_5c7ccfd8_5657726.png"></img>
 
 #  admin端
 
-![dashboard](https://images.gitee.com/uploads/images/2020/0827/203220_7c8964e8_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/203220_7c8964e8_5657726.png"></img>
+<img src="https://images.gitee.com/uploads/images/2020/0827/203244_02019117_5657726.png"></img>
 
-![博客管理](https://images.gitee.com/uploads/images/2020/0827/203244_02019117_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/203324_cbbec5a2_5657726.png"> </img>
+<img src="https://images.gitee.com/uploads/images/2020/0827/203440_296dba36_5657726.png"></img>
+<img src="https://images.gitee.com/uploads/images/2020/0827/203513_2e01bbb5_5657726.png"></img>
 
-![按钮管理](https://images.gitee.com/uploads/images/2020/0827/203324_cbbec5a2_5657726.png "屏幕截图.png")
-
-![search接口管理](https://images.gitee.com/uploads/images/2020/0827/203440_296dba36_5657726.png "屏幕截图.png")
-
-![图片管理](https://images.gitee.com/uploads/images/2020/0827/203513_2e01bbb5_5657726.png "屏幕截图.png")
-
-![系统监控中心](https://images.gitee.com/uploads/images/2020/0827/203537_ba4dddda_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/203537_ba4dddda_5657726.png"></img>
