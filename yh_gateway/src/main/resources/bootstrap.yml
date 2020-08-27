@@ -1,0 +1,45 @@
+server:
+  port: 8607
+
+spring:
+  application:
+    name: yhblog-gateway
+  security:
+    user:
+      name: user
+      password: user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.70.200.174:8848
+    gateway:
+      discovery:  #是否与服务发现组件进行结合，通过 serviceId(必须设置成大写) 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lowerCaseServiceId: true #使用小写服务名，默认是大写
+      routes: # 配置路由规则,
+
+        - id: api-monitor
+          uri: lb://yhblog-monitor
+          predicates:
+            - Path=/api-monitor/**
+
+        - id: api-picture
+          uri: lb://yhblog-picture
+          predicates:
+            - Path=/api-picture/**
+
+        - id: api-web
+          uri: lb://yhblog-web
+          predicates:
+            - Path=/api-web/**
+
+        - id: api-admin
+          uri: lb://yhblog-admin
+          predicates:
+            - Path=/api-admin/**
+
+        - id: api-sms
+          uri: lb://yhblog-sms
+          predicates:
+            - Path=/api-sms/**

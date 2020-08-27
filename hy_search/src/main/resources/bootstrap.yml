@@ -1,0 +1,35 @@
+server:
+  port: 8605
+
+spring:
+  elasticsearch:
+    rest:
+      uris: http://124.70.200.174:9200
+  application:
+    name: hy-search
+  cloud:
+    inetutils:
+      ignored-interfaces: eth.*
+    nacos:
+      discovery:
+        server-addr: 124.70.200.174:8848
+        ip: 124.70.200.174
+      config:
+        group: hyblog
+        file-extension: yaml
+        server-addr: 124.70.200.174:8848
+
+    # 配置Sentinel流控
+    sentinel:
+      transport:
+        #配置Sentinel dashboard地址
+        dashboard: 124.70.200.174:8858
+        #默认8719端口,如果被占用会向上扫描。
+        port: 8858
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.70.200.174:3306/hy_blog?serverTimezone=UTC&characterEncoding=UTF-8

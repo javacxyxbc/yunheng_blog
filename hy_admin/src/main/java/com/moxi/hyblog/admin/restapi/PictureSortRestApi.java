@@ -1,0 +1,118 @@
+package com.moxi.hyblog.admin.restapi;
+
+
+import com.moxi.hyblog.admin.annotion.AuthorityVerify.AuthorityVerify;
+import com.moxi.hyblog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommit;
+import com.moxi.hyblog.admin.annotion.OperationLogger.OperationLogger;
+import com.moxi.hyblog.admin.global.SysConf;
+import com.moxi.hyblog.commons.entity.PictureSort;
+import com.moxi.hyblog.utils.ResultUtil;
+import com.moxi.hyblog.xo.service.PictureSortService;
+import com.moxi.hyblog.xo.vo.PictureSortVO;
+import com.moxi.hyblog.base.exception.ThrowableUtils;
+import com.moxi.hyblog.base.validator.group.Delete;
+import com.moxi.hyblog.base.validator.group.GetList;
+import com.moxi.hyblog.base.validator.group.Insert;
+import com.moxi.hyblog.base.validator.group.Update;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+
+/**
+ * <p>
+ * 图片分类表 RestApi
+ * </p>
+ *
+ */
+/**
+ * @author hzh
+ * @since 2020-08-07
+ */
+@Api(value = "图片分类相关接口", tags = {"图片分类相关接口"})
+@RestController
+@RequestMapping("/pictureSort")
+@Slf4j
+public class PictureSortRestApi {
+
+    @Autowired
+    PictureSortService pictureSortService;
+
+    //@AuthorityVerify
+    @ApiOperation(value = "获取图片分类列表,nginx版本", notes = "获取图片分类列表", response = String.class)
+    @PostMapping(value = "/getListN")
+    public String getListN( @RequestBody PictureSortVO pictureSortVO) {
+        // 参数校验
+
+        return ResultUtil.result(SysConf.SUCCESS, pictureSortService.getPageListN(pictureSortVO));
+    }
+    @AuthorityVerify
+    @ApiOperation(value = "获取图片分类列表,七牛云版", notes = "获取图片分类列表", response = String.class)
+    @PostMapping(value = "/getList")
+    public String getList(@Validated({GetList.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        return ResultUtil.result(SysConf.SUCCESS, pictureSortService.getPageList(pictureSortVO));
+    }
+
+    @AvoidRepeatableCommit
+    @AuthorityVerify
+    @OperationLogger(value = "增加图片分类")
+    @ApiOperation(value = "增加图片分类", notes = "增加图片分类", response = String.class)
+    @PostMapping("/add")
+    public String add(@Validated({Insert.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        return pictureSortService.addPictureSort(pictureSortVO);
+    }
+
+    @AuthorityVerify
+    @OperationLogger(value = "编辑图片分类")
+    @ApiOperation(value = "编辑图片分类", notes = "编辑图片分类", response = String.class)
+    @PostMapping("/edit")
+    public String edit(@Validated({Update.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        return pictureSortService.editPictureSort(pictureSortVO);
+    }
+
+    @AuthorityVerify
+    @OperationLogger(value = "删除图片分类")
+    @ApiOperation(value = "删除图片分类", notes = "删除图片分类", response = String.class)
+    @PostMapping("/delete")
+    public String delete(@Validated({Delete.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        return pictureSortService.deletePictureSort(pictureSortVO);
+    }
+
+    @AuthorityVerify
+    @OperationLogger(value = "置顶分类")
+    @ApiOperation(value = "置顶分类", notes = "置顶分类", response = String.class)
+    @PostMapping("/stick")
+    public String stick(@Validated({Delete.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        return pictureSortService.stickPictureSort(pictureSortVO);
+    }
+
+    @OperationLogger(value = "通过Uid获取分类")
+    @ApiOperation(value = "通过Uid获取分类", notes = "通过Uid获取分类", response = String.class)
+    @PostMapping("/getPictureSortByUid")
+    public String getPictureSortByUid(@Validated({Delete.class}) @RequestBody PictureSortVO pictureSortVO, BindingResult result) {
+        // 参数校验
+        ThrowableUtils.checkParamArgument(result);
+        PictureSort pictureSort = pictureSortService.getById(pictureSortVO.getUid());
+        return ResultUtil.result(SysConf.SUCCESS, pictureSort);
+    }
+}
+

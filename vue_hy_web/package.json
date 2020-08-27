@@ -1,0 +1,50 @@
+{
+  "name": "myblob",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "build": "node build/build.js",
+    "build:report": "npm_config_report=true npm run build",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
+    "js-cookie": "^2.2.1",
+    "marked": "^1.1.1",
+    "mavon-editor": "^2.9.0",
+    "node-notifier": "^8.0.0",
+    "nprogress": "^0.2.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-load-config": "^2.1.0",
+    "postcss-url": "^8.0.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "shelljs": "^0.8.4",
+    "svg-sprite-loader": "^5.0.0",
+    "vue": "^2.6.11",
+    "vue-particles": "^1.0.9",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.5.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "postcss-import": "^12.0.1",
+    "uglifyjs-webpack-plugin": "^1.0.0-rc.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

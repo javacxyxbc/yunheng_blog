@@ -1,0 +1,16 @@
+server:
+  port: 8602
+spring:
+  application:
+    name: hy-picture
+  cloud:
+    inetutils:
+      ignored-interfaces: eth.*
+    nacos:
+      discovery:
+        server-addr: 124.70.200.174:8848
+        ip: 124.70.200.174
+      config:
+        file-extension: yaml
+        group: hyblog
+        server-addr: 124.70.200.174:8848

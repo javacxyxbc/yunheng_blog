@@ -1,0 +1,103 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.moxi</groupId>
+    <artifactId>hy_blog</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>hy_blog</name>
+    <description>a blog web</description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <swagger.version>2.6.1</swagger.version>
+        <swagger.ui.version>2.6.1</swagger.ui.version>
+        <servlet.api.version>3.0-alpha-1</servlet.api.version>
+        <net.sf.json.lib.version>2.4</net.sf.json.lib.version>
+        <alibaba.fastjson.version>1.2.31</alibaba.fastjson.version>
+        <jackson.mapper.asl.version>1.9.13</jackson.mapper.asl.version>
+        <javax.mail.version>1.4</javax.mail.version>
+        <aliyun.java.sdk.dysmsapi.version>1.0.0</aliyun.java.sdk.dysmsapi.version>
+        <aliyun.java.sdk.core.version>3.2.5</aliyun.java.sdk.core.version>
+        <mybatis.plus.boot.starter.version>3.1.2</mybatis.plus.boot.starter.version>
+        <jjwt.version>0.7.0</jjwt.version>
+        <druid.version>1.1.8</druid.version>
+        <google.code.gson.version>2.7</google.code.gson.version>
+        <lombok.version>1.18.10</lombok.version>
+        <Hutool.version>4.6.4</Hutool.version>
+        <log4j.version>1.2.17</log4j.version>
+        <eureka.version>1.2.3.RELEASE</eureka.version>
+        <startFeign.version>1.4.7.RELEASE</startFeign.version>
+        <qiniu.version>[7.2.0, 7.2.99]</qiniu.version>
+        <springBootAdmin.version>2.2.1</springBootAdmin.version>
+        <JustAuth.version>1.15.1</JustAuth.version>
+        <dyuproject.version>1.1.5</dyuproject.version>
+        <flexmark.version>0.61.0</flexmark.version>
+        <ip2region.version>1.7.2</ip2region.version>
+        <oshi.version>3.9.1</oshi.version>
+        <freemarker.version>2.3.28</freemarker.version>
+    </properties>
+
+
+    <modules>
+        <module>hy_utils</module>
+        <module>hy_base</module>
+        <module>hy_xo</module>
+        <module>hy_admin</module>
+        <module>hy_web</module>
+        <module>hy_picture</module>
+        <module>hy_sms</module>
+        <module>hy_search</module>
+        <module>hy_monitor</module>
+        <module>hy_gateway</module>
+        <module>hy_zipkin</module>
+        <module>hy_spider</module>
+        <module>hy_commons</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--阿里云镜像源-->
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>nexus-aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>

@@ -1,0 +1,108 @@
+package com.moxi.hyblog.xo.service;
+
+import com.moxi.hyblog.commons.entity.Admin;
+import com.moxi.hyblog.commons.entity.CategoryMenu;
+import com.moxi.hyblog.xo.vo.AdminVO;
+import com.moxi.hyblog.base.service.SuperService;
+
+import java.util.List;
+
+/**
+ * <p>
+ * 管理员表 服务类
+ * </p>
+ *
+ * @author xuzhixiang
+ * @since 2018-09-04
+ */
+public interface AdminService extends SuperService<Admin> {
+
+
+    /**
+     * 获取权限列表
+     * @param uid
+     * @return
+     */
+    public String[] getAdminAuthorities(String uid);
+    /**
+     * 通过UID获取Admin
+     *
+     * @param uid
+     * @return
+     */
+    public Admin getAdminByUid(String uid);
+
+    /**
+     * 获取在线用户列表
+     * @param adminVO
+     * @return
+     */
+    public String getOnlineAdminList(AdminVO adminVO);
+
+    /**
+     * Web端通过用户名获取一个Admin
+     *
+     * @param userName
+     * @return
+     */
+    public Admin getAdminByUser(String userName);
+
+    /**
+     * 获取当前管理员
+     *
+     * @return
+     */
+    public Admin getMe();
+
+    /**
+     * 添加在线用户
+     * @param admin
+     * @return
+     */
+    public void addOnlineAdmin(Admin admin);
+
+    public String getList(AdminVO adminVO);
+    /**
+     * 添加管理员
+     * @param adminVO
+     * @return
+     */
+    public String addAdmin(AdminVO adminVO);
+
+    /**
+     * 编辑管理员
+     * @param adminVO
+     * @return
+     */
+    public String editAdmin(AdminVO adminVO);
+
+    /**
+     * 编辑当前管理员信息
+     *
+     * @return
+     */
+    public String editMe(AdminVO adminVO);
+
+    /**
+     * 修改密码
+     *
+     * @return
+     */
+    public String changePwd(String oldPwd, String newPwd);
+
+    /**
+     * 重置密码
+     * @param adminVO
+     * @return
+     */
+    public String resetPwd(AdminVO adminVO);
+
+    /**
+     * 批量删除管理员
+     * @param adminUids
+     * @return
+     */
+    public String deleteBatchAdmin(List<String> adminUids);
+
+    public String forceLogout(List<String> tokenList);
+}
