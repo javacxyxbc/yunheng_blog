@@ -1,7 +1,7 @@
 # 云衡博客
 
 <p align=center>
-![输入图片说明](https://images.gitee.com/uploads/images/2020/0827/202455_66b975f3_5657726.png "屏幕截图.png")
+<img src="https://images.gitee.com/uploads/images/2020/0827/205544_97f40711_5657726.png"></img>
 </p>
 <p align=center>
    云衡博客，一个基于微服务架构的前后端分离博客系统
@@ -299,7 +299,8 @@ npm install xxxxx --save
 
 #  web端
 
-![首页](https://images.gitee.com/uploads/images/2020/0827/202943_12b78cdd_5657726.png "屏幕截图.png")
+![首页]
+<img src="https://images.gitee.com/uploads/images/2020/0827/202943_12b78cdd_5657726.png "屏幕截图.png"/>
 
 ![留言](https://images.gitee.com/uploads/images/2020/0827/203029_d0487b0d_5657726.png "屏幕截图.png")
 
