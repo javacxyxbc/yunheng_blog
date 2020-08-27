@@ -1,10 +1,10 @@
 # 云衡博客
 
 <p align=center>
- ![59851548243](D:\mogu_blog\hy_blog\assets\1598515482438.png)
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0827/202455_66b975f3_5657726.png "屏幕截图.png")
 </p>
 <p align=center>
-   蘑菇博客，一个基于微服务架构的前后端分离博客系统
+   云衡博客，一个基于微服务架构的前后端分离博客系统
 </p>
 <p align="center">
 <a target="_blank" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
@@ -189,7 +189,7 @@
 
 `localhost:8601/swagger-ui.html`
 
-![59852721513](D:\mogu_blog\assets\1598527215136.png)
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0827/202439_c96670dd_5657726.png "屏幕截图.png")
 
 ### 前端
 
@@ -293,10 +293,7 @@ npm install xxxxx --save
 ## 赞赏
 
 服务器和域名等服务的购买和续费都会产生一定的费用，为了维持项目的正常运作，如果觉得本项目对您有帮助的话，欢迎朋友能够给予一些支持，非常感谢~
-
-| 微信 | ![es](D:\mogu_blog\hy_blog\assets/test.jpg) |
-| :--: | :-----------------------------------------: |
-|      |                                             |
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0827/202404_16864e01_5657726.png "屏幕截图.png")
 
 ## 相关截图
 
